@@ -10,7 +10,7 @@ export default function HomePage() {
           src={HeroImage}
           alt="HeroImage"
         />
-        <div className="w-full h-full bg-slate-900 absolute top-0 opacity-30"></div>
+        <div className="w-full h-screen bg-slate-900 absolute top-0 opacity-30"></div>
         <div className="text-center w-96 md:w-[50rem] absolute top-[56%] right-1/2 transform -translate-y-1/2 translate-x-1/2 mx-auto text-white">
           <h1 className="text-4xl font-bold mb-2 md:text-6xl">
             Know Your Helmet
