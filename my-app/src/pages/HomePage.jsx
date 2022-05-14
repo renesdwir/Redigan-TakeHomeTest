@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import HeroImage from "../assets/hero-image.jpg";
 
 export default function HomePage() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="h-screen">
@@ -21,7 +23,10 @@ export default function HomePage() {
               HELMET.<span className="text-yellow-500">CO</span>
             </span>
           </p>
-          <button className="bg-yellow-500 hover:bg-yellow-600 px-4 py-2 text-lg mt-8 duration-300">
+          <button
+            onClick={() => navigate("/suggestion")}
+            className="bg-yellow-500 hover:bg-yellow-600 px-4 py-2 text-lg mt-8 duration-300"
+          >
             START NOW
           </button>
         </div>
