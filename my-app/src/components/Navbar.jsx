@@ -1,15 +1,22 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 export default function NewNavbar() {
+  const navigate = useNavigate();
   const [isActive, setIsActive] = useState(true);
   const activeHandler = () => {
     setIsActive(!isActive);
+  };
+  const handleClick = (e) => {
+    setIsActive(true);
   };
   return (
     <header className="text-white fixed top-0 left-0 right-0 z-10">
       <div className="px-5 container mx-auto lg:px-10 md:flex flex-row justify-between py-5">
         <div className="flex flex-row justify-between w-full">
-          <div className="font-bold text-2xl my-auto italic cursor-pointer">
+          <div
+            onClick={() => navigate("/")}
+            className="font-bold text-2xl my-auto italic cursor-pointer"
+          >
             HELMET.<span className="text-yellow-500">CO</span>
           </div>
           <div onClick={activeHandler} className="flex md:hidden">
@@ -53,20 +60,29 @@ export default function NewNavbar() {
             } transition-all duration-200 md:text-center md:gap-10 my-3 md:my-0`}
           >
             <li className="py-2 md:py-0">
-              <Link to="/" className="duration-200 hover:text-yellow-500">
+              <Link
+                to="/"
+                onClick={handleClick}
+                className="duration-200 hover:text-yellow-500"
+              >
                 Home
               </Link>
             </li>
             <li className="py-2 md:py-0">
               <Link
-                to="/suggestion"
+                onClick={handleClick}
+                to="/questionnaire"
                 className="duration-200 hover:text-yellow-500"
               >
-                Suggestion
+                Questionnaire
               </Link>
             </li>
             <li className="py-2 md:py-0">
-              <Link to="/" className="duration-200 hover:text-yellow-500">
+              <Link
+                to="/"
+                onClick={handleClick}
+                className="duration-200 hover:text-yellow-500"
+              >
                 About
               </Link>
             </li>

@@ -1,8 +1,9 @@
 import React from "react";
 import city from "../assets/city.jpg";
 import travelling from "../assets/travelling.jpg";
+import { Link } from "react-router-dom";
 
-export default function SuggestionPage() {
+export default function QuestionnairePage() {
   return (
     <div className="max-h-screen">
       <div className="relative">
@@ -29,12 +30,18 @@ export default function SuggestionPage() {
             <span className="text-yellow-500 italic">travelling</span> person ?
           </h1>
           <div className="mt-10 flex flex-row gap-5 justify-center text-white">
-            <button className="w-28 uppercase py-2 hover:bg-yellow-500 shadow-sm  shadow-yellow-500 font-bold border-2 border-yellow-500">
+            <Link
+              to="/result/city"
+              className="w-28 uppercase py-2 hover:bg-yellow-500 shadow-sm  shadow-yellow-500 font-bold border-2 border-yellow-500"
+            >
               city
-            </button>
-            <button className="w-28 uppercase py-2 hover:bg-yellow-500 shadow-sm  shadow-yellow-500 font-bold border-2 border-yellow-500">
+            </Link>
+            <Link
+              to="/result/travelling"
+              className="w-28 uppercase py-2 hover:bg-yellow-500 shadow-sm  shadow-yellow-500 font-bold border-2 border-yellow-500"
+            >
               traveling
-            </button>
+            </Link>
           </div>
         </div>
       </div>
