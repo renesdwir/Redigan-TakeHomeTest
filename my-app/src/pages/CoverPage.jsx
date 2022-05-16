@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import HeroImage from "../assets/hero-image.jpg";
 
-export default function HomePage() {
+export default function CoverPage() {
   const navigate = useNavigate();
   return (
     <>
@@ -24,7 +24,7 @@ export default function HomePage() {
             </span>
           </p>
           <button
-            onClick={() => navigate("/suggestion")}
+            onClick={() => navigate("/questionnaire")}
             className="bg-yellow-500 hover:bg-yellow-600 px-4 py-2 text-lg mt-8 duration-300"
           >
             START NOW
